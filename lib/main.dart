@@ -24,16 +24,16 @@ class InnovationTeamDeviceApp extends StatelessWidget {
 class TeamDeviceHomePage extends StatelessWidget {
   const TeamDeviceHomePage({super.key});
 
-  static const String groupName = '第X组 创新实验团队';
+  static const String groupName = '第4组 创新实验团队';
   static const String projectTitle = 'Flutter Android 真机验收看板';
-  static const String projectSlogan = '用 GitHub 协作，把第14周个人 Hello World 升级成小组真机运行成果';
+  static const String projectSlogan = '用 GitHub 协作，把第15周个人 Hello World 升级成小组真机运行成果';
 
   static const List<TeamMember> members = [
-    TeamMember(role: '组长', name: '请填写组长姓名', task: '创建原始仓库、维护 main、审核 PR、组织真机运行与证据提交'),
-    TeamMember(role: '组员 A', name: '请填写姓名', task: '修改 groupName、projectTitle、projectSlogan'),
-    TeamMember(role: '组员 B', name: '请填写姓名', task: '补全 members 中的成员姓名与分工'),
-    TeamMember(role: '组员 C', name: '请填写姓名', task: '补充 realDeviceChecks 中的真机运行检查项'),
-    TeamMember(role: '组员 D', name: '请填写姓名', task: '补充 evidenceRules，并把真机照片加入 README'),
+    TeamMember(role: '组长', name: '刘凯', task: '创建原始仓库、维护 main、审核 PR、组织真机运行与证据提交'),
+    TeamMember(role: '组员 A', name: '赵杰', task: '修改 groupName、projectTitle、projectSlogan'),
+    TeamMember(role: '组员 B', name: '陈建涛', task: '补全 members 中的成员姓名与分工'),
+    TeamMember(role: '组员 C', name: '赵家国', task: '补充 realDeviceChecks 中的真机运行检查项'),
+    TeamMember(role: '组员 D', name: '刘祖涛', task: '补充 evidenceRules，并把真机照片加入 README'),
   ];
 
   static const List<String> realDeviceChecks = [
@@ -189,3 +189,4 @@ class TeamMember {
   final String name;
   final String task;
 }
+

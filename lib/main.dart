@@ -36,12 +36,20 @@ class TeamDeviceHomePage extends StatelessWidget {
     TeamMember(role: '组员 D', name: '刘祖涛', task: '补充 evidenceRules，并把真机照片加入 README'),
   ];
 
-  static const List<String> realDeviceChecks = [
-    '主电脑能执行 flutter doctor，并识别 Android toolchain',
-    'Android 手机已打开开发者选项和 USB 调试',
-    'adb devices 显示设备状态为 device，而不是 unauthorized',
-    'flutter devices 能看到真实 Android 设备',
+ static const List<String> realDeviceChecks = [
+    '主机电脑能执行 flutter doctor，并识别 Android toolchain',
+    'flutter doctor -v 输出中 Android SDK 无红色错误',
+    '已安装 Android SDK Build-Tools 和 Platform-Tools',
+    'Android 手机已打开开发者选项（连续点击"版本号"7次）',
+    'Android 手机已开启 USB 调试模式',
+    '手机已通过 USB 数据线（非仅充电线）连接到主电脑',
+    '手机屏幕已授权此电脑的 USB 调试请求（弹窗点击"始终允许"）',
+    'adb devices 显示设备状态为 device，而不是 unauthorized 或 offline',
+    'flutter devices 能看到真实 Android 设备（非仅模拟器）',
+    '在项目根目录已执行 flutter pub get，无依赖报错',
+    'flutter run 能成功编译并将 App 安装到手机',
     'flutter run 后手机屏幕显示本小组修改后的页面',
+    'App 页面中能正确显示小组名称、成员分工、检查项和证据要求',
   ];
 
   static const List<String> evidenceRules = [

@@ -44,11 +44,11 @@ class TeamDeviceHomePage extends StatelessWidget {
     'flutter run 后手机屏幕显示本小组修改后的页面',
   ];
 
-  static const List<String> evidenceRules = [
-    '证据照片必须由第二部手机拍摄，不能用本机截图代替',
-    '照片中要看到手持真实 Android 手机和本应用页面',
-    'README 中要包含 GitHub 协作说明、PR 合并记录和真机照片',
-    '提交前检查照片不包含私人聊天、手机号、定位等隐私信息',
+  static const List<String> realDeviceChecks = [
+    '主电脑能执行 flutter doctor，并识别 Android toolchain',
+    '已开启手机的开发者选项和 USB 调试',
+    '手机通过数据线连接电脑，并授权 USB 调试',
+    '终端运行 flutter devices 能看到真实手机型号',
   ];
 
   @override

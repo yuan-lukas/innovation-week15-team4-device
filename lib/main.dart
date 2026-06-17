@@ -11,7 +11,7 @@ class InnovationTeamDeviceApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: '鍒涙柊瀹為獙鍥㈤槦鐪熸満楠屾敹',
+      title: '创新实验团队真机验收',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.indigo),
         useMaterial3: true,
@@ -24,41 +24,47 @@ class InnovationTeamDeviceApp extends StatelessWidget {
 class TeamDeviceHomePage extends StatelessWidget {
   const TeamDeviceHomePage({super.key});
 
-  static const String groupName = '绗?缁?鍒涙柊瀹為獙鍥㈤槦';
-  static const String projectTitle = 'Flutter Android 鐪熸満楠屾敹鐪嬫澘';
-  static const String projectSlogan = '鐢?GitHub 鍗忎綔锛屾妸绗?5鍛ㄤ釜浜?Hello World 鍗囩骇鎴愬皬缁勭湡鏈鸿繍琛屾垚鏋?;
+  static const String groupName = '第4组 创新实验团队';
+  static const String projectTitle = 'Flutter Android 真机验收看板';
+  static const String projectSlogan = '用 GitHub 协作，把第15周个人 Hello World 升级成小组真机运行成果';
 
   static const List<TeamMember> members = [
-    TeamMember(role: '缁勯暱', name: '鍒樺嚡', task: '鍒涘缓鍘熷浠撳簱銆佺淮鎶?main銆佸鏍?PR銆佺粍缁囩湡鏈鸿繍琛屼笌璇佹嵁鎻愪氦'),
-    TeamMember(role: '缁勫憳 A', name: '璧垫澃', task: '淇敼 groupName銆乸rojectTitle銆乸rojectSlogan'),
-    TeamMember(role: '缁勫憳 B', name: '闄堝缓娑?, task: '琛ュ叏 members 涓殑鎴愬憳濮撳悕涓庡垎宸?),
-    TeamMember(role: '缁勫憳 C', name: '璧靛鍥?, task: '琛ュ厖 realDeviceChecks 涓殑鐪熸満杩愯妫€鏌ラ」'),
-    TeamMember(role: '缁勫憳 D', name: '鍒樼娑?, task: '琛ュ厖 evidenceRules锛屽苟鎶婄湡鏈虹収鐗囧姞鍏?README'),
+    TeamMember(role: '组长', name: '刘凯', task: '创建原始仓库、维护 main、审核 PR、组织真机运行与证据提交'),
+    TeamMember(role: '组员 A', name: '赵杰', task: '修改 groupName、projectTitle、projectSlogan'),
+    TeamMember(role: '组员 B', name: '陈建涛', task: '补全 members 中的成员姓名与分工'),
+    TeamMember(role: '组员 C', name: '赵家国', task: '补充 realDeviceChecks 中的真机运行检查项'),
+    TeamMember(role: '组员 D', name: '刘祖涛', task: '补充 evidenceRules，并把真机照片加入 README'),
   ];
 
-  static const List<String> realDeviceChecks = [
-    '涓荤數鑴戣兘鎵ц flutter doctor锛屽苟璇嗗埆 Android toolchain',
-    'Android 鎵嬫満宸叉墦寮€寮€鍙戣€呴€夐」鍜?USB 璋冭瘯',
-    'adb devices 鏄剧ず璁惧鐘舵€佷负 device锛岃€屼笉鏄?unauthorized',
-    'flutter devices 鑳界湅鍒扮湡瀹?Android 璁惧',
-    'flutter run 鍚庢墜鏈哄睆骞曟樉绀烘湰灏忕粍淇敼鍚庣殑椤甸潰',
+   static const List<String> realDeviceChecks = [
+    '主机电脑能执行 flutter doctor，并识别 Android toolchain',
+    'flutter doctor -v 输出中 Android SDK 无红色错误',
+    '已安装 Android SDK Build-Tools 和 Platform-Tools',
+    'Android 手机已打开开发者选项（连续点击"版本号"7次）',
+    'Android 手机已开启 USB 调试模式',
+    '手机已通过 USB 数据线（非仅充电线）连接到主电脑',
+    '手机屏幕已授权此电脑的 USB 调试请求（弹窗点击"始终允许"）',
+    'adb devices 显示设备状态为 device，而不是 unauthorized 或 offline',
+    'flutter devices 能看到真实 Android 设备（非仅模拟器）',
+    '在项目根目录已执行 flutter pub get，无依赖报错',
+    'flutter run 能成功编译并将 App 安装到手机',
+    'flutter run 后手机屏幕显示本小组修改后的页面',
+    'App 页面中能正确显示小组名称、成员分工、检查项和证据要求',
   ];
 
-  // [缁勫憳D淇敼] 鏇存柊璇佹嵁瑙勫垯锛屽寘鍚湡鏈虹収鐗囪缁嗚姹傚拰 README 寮曠敤璇存槑
+
   static const List<String> evidenceRules = [
-    '璇佹嵁鐓х墖蹇呴』鐢辩浜岄儴鎵嬫満鎷嶆憚锛屼笉鑳界敤鏈満鎴浘浠ｆ浛',
-    '鐓х墖涓鐪嬪埌鎵嬫寔鐪熷疄 Android 鎵嬫満鍜屾湰搴旂敤椤甸潰',
-    '涓嶈兘鏄?Web 鎴浘銆丄ndroid 妯℃嫙鍣ㄦ埅鍥炬垨鎵嬫満鏈満鎴浘',
-    '鐓х墖鏂囦欢鍚嶄负 images/android-real-device.jpg锛屾斁鍏ラ」鐩?images/ 鐩綍',
-    'README 涓紩鐢細![Android 鐪熸満杩愯鐓х墖](images/android-real-device.jpg)',
-    '鎻愪氦鍓嶆鏌ョ収鐗囦笉鍖呭惈绉佷汉鑱婂ぉ銆佹墜鏈哄彿銆佸畾浣嶇瓑闅愮淇℃伅',
+    '证据照片必须由第二部手机拍摄，不能用本机截图代替',
+    '照片中要看到手持真实 Android 手机和本应用页面',
+    'README 中要包含 GitHub 协作说明、PR 合并记录和真机照片',
+    '提交前检查照片不包含私人聊天、手机号、定位等隐私信息',
   ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('鍒涙柊瀹為獙绗?5鍛?),
+        title: const Text('创新实验第15周'),
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
       ),
       body: ListView(
@@ -111,7 +117,7 @@ class MembersSection extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const Text('灏忕粍鎴愬憳涓?PR 鍒嗗伐', style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold)),
+        const Text('小组成员与 PR 分工', style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold)),
         const SizedBox(height: 12),
         ...TeamDeviceHomePage.members.map((member) => MemberCard(member: member)),
       ],
@@ -129,7 +135,7 @@ class MemberCard extends StatelessWidget {
     return Card(
       child: ListTile(
         leading: CircleAvatar(child: Text(member.role.characters.last)),
-        title: Text('${member.role}锛?{member.name}'),
+        title: Text('${member.role}：${member.name}'),
         subtitle: Text(member.task),
       ),
     );
@@ -147,11 +153,11 @@ class RealDeviceChecksSection extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Text('Android 鐪熸満杩愯妫€鏌ラ」', style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold)),
+            const Text('Android 真机运行检查项', style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold)),
             const SizedBox(height: 8),
             ...TeamDeviceHomePage.realDeviceChecks.map((item) => Padding(
                   padding: const EdgeInsets.only(bottom: 6),
-                  child: Text('鈥?$item'),
+                  child: Text('• $item'),
                 )),
           ],
         ),
@@ -172,11 +178,11 @@ class EvidenceRulesSection extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Text('鏈€缁堣瘉鎹姹?, style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold)),
+            const Text('最终证据要求', style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold)),
             const SizedBox(height: 8),
             ...TeamDeviceHomePage.evidenceRules.map((rule) => Padding(
                   padding: const EdgeInsets.only(bottom: 6),
-                  child: Text('鈥?$rule'),
+                  child: Text('• $rule'),
                 )),
           ],
         ),
@@ -192,3 +198,4 @@ class TeamMember {
   final String name;
   final String task;
 }
+

@@ -1,118 +1,105 @@
-# 创新实验第15周：团队协作与 Android 真机运行示例
+# 鍒涙柊瀹為獙绗?5鍛細鍥㈤槦鍗忎綔涓?Android 鐪熸満杩愯绀轰緥
 
-本项目用于第15周课堂任务：在第14周 Flutter Hello World 和 GitHub 提交练习的基础上，小组通过 Pull Request 协作修改同一个 Flutter 项目，并把最终版本运行到真实 Android 手机上。
+鏈」鐩敤浜庣15鍛ㄨ鍫備换鍔★細鍦ㄧ14鍛?Flutter Hello World 鍜?GitHub 鎻愪氦缁冧範鐨勫熀纭€涓婏紝灏忕粍閫氳繃 Pull Request 鍗忎綔淇敼鍚屼竴涓?Flutter 椤圭洰锛屽苟鎶婃渶缁堢増鏈繍琛屽埌鐪熷疄 Android 鎵嬫満涓娿€?
 
-## 最终要提交什么
+## 鏈€缁堣鎻愪氦浠€涔?
 
-每组需要提交：
+姣忕粍闇€瑕佹彁浜わ細
+1. GitHub 鍘熷浠撳簱閾炬帴銆?
+2. 4 鍚嶇粍鍛樼殑 Fork銆佸垎鏀€乧ommit 鎴?Pull Request 璇佹嵁銆?
+3. 缁勯暱鍚堝苟 PR 鍚庣殑鏈€缁?`main` 鍒嗘敮鎴浘銆?
+4. 鐪熷疄 Android 鎵嬫満杩愯鏈簲鐢ㄧ殑鐓х墖銆?
+5. README 涓睍绀虹湡鏈虹収鐗囧拰灏忕粍鍒嗗伐銆?
 
-1. GitHub 原始仓库链接。
-2. 4 名组员的 Fork、分支、commit 或 Pull Request 证据。
-3. 组长合并 PR 后的最终 `main` 分支截图。
-4. 真实 Android 手机运行本应用的照片。
-5. README 中展示真机照片和小组分工。
+## 鎺ㄨ崘鍗忎綔鏂瑰紡
 
-## 推荐协作方式
-
-本周统一使用 Fork + Pull Request：
+鏈懆缁熶竴浣跨敤 Fork + Pull Request锛?
 
 ```text
-组长创建原始仓库
-  ↓
-组员 Fork 到自己的 GitHub
-  ↓
-组员 clone 自己的 Fork
-  ↓
-组员创建个人分支并修改指定区域
-  ↓
-组员 push 到自己的 Fork
-  ↓
-组员向组长仓库提交 Pull Request
-  ↓
-组长 Review 并合并
-  ↓
-主电脑运行合并后的最终版本
+缁勯暱鍒涘缓鍘熷浠撳簱
+鈫?
+缁勫憳 Fork 鍒拌嚜宸辩殑 GitHub
+鈫?
+缁勫憳 clone 鑷繁鐨?Fork
+鈫?
+缁勫憳鍒涘缓涓汉鍒嗘敮骞朵慨鏀规寚瀹氬尯鍩?
+鈫?
+缁勫憳 push 鍒拌嚜宸辩殑 Fork
+鈫?
+缁勫憳鍚戠粍闀夸粨搴撴彁浜?Pull Request
+鈫?
+缁勯暱 Review 骞跺悎骞?
+鈫?
+涓荤數鑴戣繍琛屽悎骞跺悗鐨勬渶缁堢増鏈?
 ```
 
-组员不要直接 push 到组长仓库的 `main` 分支。
+缁勫憳涓嶈鐩存帴 push 鍒扮粍闀夸粨搴撶殑 `main` 鍒嗘敮銆?
 
-## 小组分工建议
+## 灏忕粍鍒嗗伐寤鸿
 
-| 角色 | 修改位置 | 任务 |
+| 瑙掕壊 | 淇敼浣嶇疆 | 浠诲姟 |
 | --- | --- | --- |
-| 组长 | GitHub 仓库 | 创建仓库、维护 `main`、审核 PR、组织真机运行 |
-| 组员 A | `lib/main.dart` | 修改 `groupName`、`projectTitle`、`projectSlogan` |
-| 组员 B | `lib/main.dart` | 补全 `members` 中的小组成员姓名与分工 |
-| 组员 C | `lib/main.dart` | 补充 `realDeviceChecks` 中的真机检查项 |
-| 组员 D | `lib/main.dart` 和 `README.md` | 补充 `evidenceRules`，提交真机照片说明 |
+| 缁勯暱 | GitHub 浠撳簱 | 鍒涘缓浠撳簱銆佺淮鎶?`main`銆佸鏍?PR銆佺粍缁囩湡鏈鸿繍琛?|
+| 缁勫憳 A | `lib/main.dart` | 淇敼 `groupName`銆乣projectTitle`銆乣projectSlogan` |
+| 缁勫憳 B | `lib/main.dart` | 琛ュ叏 `members` 涓殑灏忕粍鎴愬憳濮撳悕涓庡垎宸?|
+| 缁勫憳 C | `lib/main.dart` | 琛ュ厖 `realDeviceChecks` 涓殑鐪熸満妫€鏌ラ」 |
+| 缁勫憳 D | `lib/main.dart` 鍜?`README.md` | 琛ュ厖 `evidenceRules`锛屾彁浜ょ湡鏈虹収鐗囪鏄?|
 
-## 运行命令
+## 杩愯鍛戒护
 
-进入项目根目录后执行：
-
+杩涘叆椤圭洰鏍圭洰褰曞悗鎵ц锛?
 ```bash
 flutter pub get
 flutter test
 flutter run
 ```
 
-如果电脑连接了多台设备，先查看设备：
-
+濡傛灉鐢佃剳杩炴帴浜嗗鍙拌澶囷紝鍏堟煡鐪嬭澶囷細
 ```bash
 flutter devices
 ```
-
-再指定真实 Android 手机运行：
-
+鍐嶆寚瀹氱湡瀹?Android 鎵嬫満杩愯锛?
 ```bash
-flutter run -d 设备ID
+flutter run -d 璁惧ID
 ```
 
-## Android 真机检查
+## Android 鐪熸満妫€鏌?
 
-连接手机后先检查：
-
+杩炴帴鎵嬫満鍚庡厛妫€鏌ワ細
 ```bash
 adb devices
 flutter devices
 ```
-
-`adb devices` 的状态应为：
-
+`adb devices` 鐨勭姸鎬佸簲涓猴細
 ```text
 device
 ```
+濡傛灉鏄剧ず `unauthorized`锛岃瑙ｉ攣鎵嬫満骞跺厑璁?USB 璋冭瘯銆?
 
-如果显示 `unauthorized`，请解锁手机并允许 USB 调试。
+## 鐪熸満鐓х墖瑕佹眰
 
-## 真机照片要求
-
-请把照片放到：
-
+璇锋妸鐓х墖鏀惧埌锛?
 ```text
 images/android-real-device.jpg
 ```
-
-并在本 README 中引用：
-
+骞跺湪鏈?README 涓紩鐢細
 ```markdown
-![Android 真机运行照片](images/android-real-device.jpg)
+![Android 鐪熸満杩愯鐓х墖](images/android-real-device.jpg)
 ```
 
-合格照片必须满足：
+鍚堟牸鐓х墖蹇呴』婊¤冻锛?
+- 鐪熷疄 Android 鎵嬫満姝ｅ湪杩愯鏈皬缁?Flutter 搴旂敤锛?
+- 涓嶈兘鏄?Web 鎴浘锛?
+- 涓嶈兘鏄?Android 妯℃嫙鍣ㄦ埅鍥撅紱
+- 涓嶈兘鐢ㄦ墜鏈烘湰鏈烘埅鍥句唬鏇匡紱
+- 蹇呴』鐢辩浜岄儴鎵嬫満鎷嶆憚锛?
+- 鐓х墖涓兘鐪嬪埌鎵嬫寔鎵嬫満锛?
+- 涓嶅寘鍚亰澶╄褰曘€佹墜鏈哄彿銆佸畾浣嶇瓑闅愮淇℃伅銆?
 
-- 真实 Android 手机正在运行本小组 Flutter 应用；
-- 不能是 Web 截图；
-- 不能是 Android 模拟器截图；
-- 不能用手机本机截图代替；
-- 必须由第二部手机拍摄；
-- 照片中能看到手持手机；
-- 不包含聊天记录、手机号、定位等隐私信息。
+## 鏈粍鐪熸満杩愯鐓х墖
 
-## 本组真机运行照片
+鎻愪氦鐓х墖鍚庯紝涓嬮潰搴旀樉绀烘湰缁勮繍琛屾晥鏋滐細
 
-提交照片后，下面应显示本组运行效果：
+![Android 鐪熸満杩愯鐓х墖](images/android-real-device.jpg)
 
-![Android 真机运行照片](images/android-real-device.jpg)
-
-如果图片暂时无法显示，请检查 `images/android-real-device.jpg` 是否已提交，以及文件名大小写是否一致。
+濡傛灉鍥剧墖鏆傛椂鏃犳硶鏄剧ず锛岃妫€鏌?`images/android-real-device.jpg` 鏄惁宸叉彁浜わ紝浠ュ強鏂囦欢鍚嶅ぇ灏忓啓鏄惁涓€鑷淬€?

@@ -36,7 +36,7 @@ class TeamDeviceHomePage extends StatelessWidget {
     TeamMember(role: '组员 D', name: '刘祖涛', task: '补充 evidenceRules，并把真机照片加入 README'),
   ];
 
- static const List<String> realDeviceChecks = [
+   static const List<String> realDeviceChecks = [
     '主机电脑能执行 flutter doctor，并识别 Android toolchain',
     'flutter doctor -v 输出中 Android SDK 无红色错误',
     '已安装 Android SDK Build-Tools 和 Platform-Tools',
@@ -51,6 +51,7 @@ class TeamDeviceHomePage extends StatelessWidget {
     'flutter run 后手机屏幕显示本小组修改后的页面',
     'App 页面中能正确显示小组名称、成员分工、检查项和证据要求',
   ];
+
 
   static const List<String> evidenceRules = [
     '证据照片必须由第二部手机拍摄，不能用本机截图代替',

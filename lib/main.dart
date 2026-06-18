@@ -26,49 +26,57 @@ class TeamDeviceHomePage extends StatelessWidget {
 
   static const String groupName = '第4组 创新实验团队';
   static const String projectTitle = 'Flutter Android 真机验收看板';
-  static const String projectSlogan = '用 GitHub 协作，把第15周个人 Hello World 升级成小组真机运行成果';
+  static const String projectSlogan =
+      '用 GitHub 协作，把第14周个人 Hello World 升级成第15周小组真机运行成果';
 
   static const List<TeamMember> members = [
-    TeamMember(role: '组长', name: '刘凯', task: '创建原始仓库、维护 main、审核 PR、组织真机运行与证据提交'),
-    TeamMember(role: '组员 A', name: '赵杰', task: '修改 groupName、projectTitle、projectSlogan'),
+    TeamMember(
+      role: '组长',
+      name: '刘凯',
+      task: '创建原始仓库、维护 main、审核 PR、组织真机运行与证据提交',
+    ),
+    TeamMember(
+      role: '组员 A',
+      name: '赵杰',
+      task: '修改 groupName、projectTitle、projectSlogan',
+    ),
     TeamMember(role: '组员 B', name: '陈建涛', task: '补全 members 中的成员姓名与分工'),
-    TeamMember(role: '组员 C', name: '赵家国', task: '补充 realDeviceChecks 中的真机运行检查项'),
-    TeamMember(role: '组员 D', name: '刘祖涛', task: '补充 evidenceRules，并把真机照片加入 README'),
-  ];
-
-   static const List<String> realDeviceChecks = [
-    '主机电脑能执行 flutter doctor，并识别 Android toolchain',
-    'flutter doctor -v 输出中 Android SDK 无红色错误',
-    '已安装 Android SDK Build-Tools 和 Platform-Tools',
-    'Android 手机已打开开发者选项（连续点击"版本号"7次）',
-    'Android 手机已开启 USB 调试模式',
-    '手机已通过 USB 数据线（非仅充电线）连接到主电脑',
-    '手机屏幕已授权此电脑的 USB 调试请求（弹窗点击"始终允许"）',
-    'adb devices 显示设备状态为 device，而不是 unauthorized 或 offline',
-    'flutter devices 能看到真实 Android 设备（非仅模拟器）',
-    '在项目根目录已执行 flutter pub get，无依赖报错',
-    'flutter run 能成功编译并将 App 安装到手机',
-    'flutter run 后手机屏幕显示本小组修改后的页面',
-    'App 页面中能正确显示小组名称、成员分工、检查项和证据要求',
+    TeamMember(
+      role: '组员 C',
+      name: '赵家国',
+      task: '补充 realDeviceChecks 中的真机运行检查项',
+    ),
+    TeamMember(
+      role: '组员 D',
+      name: '刘祖涛',
+      task: '补充 evidenceRules，并把真机照片加入 README',
+    ),
   ];
 
   static const List<String> realDeviceChecks = [
     '主电脑能执行 flutter doctor，并识别 Android toolchain',
-    '已开启手机的开发者选项和 USB 调试',
-    '手机通过数据线连接电脑，并授权 USB 调试',
-    '终端运行 flutter devices 能看到真实手机型号',
+    'flutter doctor -v 输出中 Android SDK 无红色错误',
+    '已安装 Android SDK Build-Tools 和 Platform-Tools',
+    'Android 手机已打开开发者选项',
+    'Android 手机已开启 USB 调试模式',
+    '手机已通过可传输数据的 USB 线连接到主电脑',
+    '手机屏幕已允许此电脑进行 USB 调试',
+    'adb devices 显示设备状态为 device',
+    'flutter devices 能看到真实 Android 设备',
+    '已在项目根目录执行 flutter pub get',
+    'flutter test 能正常完成',
+    'flutter run 能成功编译并将 App 安装到手机',
+    '手机屏幕能显示本组修改后的 Flutter 页面',
+  ];
 
   static const List<String> evidenceRules = [
     '证据照片必须由第二部手机拍摄，不能用本机截图代替',
-    '照片中要看到手持真实 Android 手机和本应用页面',
-    'README 中要包含 GitHub 协作说明、PR 合并记录和真机照片',
-    '提交前检查照片不包含私人聊天、手机号、定位等隐私信息',
-    '真机运行照片需清晰展示 Flutter App 在手机上的运行界面',
-    '照片中必须包含小组名称和组员分工信息',
-    'GitHub 仓库需保留完整的提交历史，不能 force push 覆盖',
-    'PR 合并记录必须真实，不能由同一人完成所有审查和合并',
-    '代码审查意见需在 PR 中有文字记录',
-    '最终提交前需在小组会议上进行演示确认',
+    '照片中需要看到手持真实 Android 手机',
+    'Android 手机屏幕需要显示本组 Flutter App',
+    '照片不能使用模拟器截图或手机本机截图代替',
+    '照片不得包含私人聊天、手机号、定位等隐私信息',
+    '照片文件保存为 images/android-real-device.jpg',
+    'README 中需要展示成员分工、PR 链接、设备型号、运行日期和真机照片',
   ];
 
   @override
@@ -108,11 +116,20 @@ class HeroSection extends StatelessWidget {
           children: [
             Icon(Icons.phone_android, size: 44, color: Colors.indigo),
             SizedBox(height: 12),
-            Text(TeamDeviceHomePage.groupName, style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600)),
+            Text(
+              TeamDeviceHomePage.groupName,
+              style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
+            ),
             SizedBox(height: 8),
-            Text(TeamDeviceHomePage.projectTitle, style: TextStyle(fontSize: 26, fontWeight: FontWeight.bold)),
+            Text(
+              TeamDeviceHomePage.projectTitle,
+              style: TextStyle(fontSize: 26, fontWeight: FontWeight.bold),
+            ),
             SizedBox(height: 8),
-            Text(TeamDeviceHomePage.projectSlogan, style: TextStyle(fontSize: 16)),
+            Text(
+              TeamDeviceHomePage.projectSlogan,
+              style: TextStyle(fontSize: 16),
+            ),
           ],
         ),
       ),
@@ -128,9 +145,14 @@ class MembersSection extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const Text('小组成员与 PR 分工', style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold)),
+        const Text(
+          '小组成员与 PR 分工',
+          style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+        ),
         const SizedBox(height: 12),
-        ...TeamDeviceHomePage.members.map((member) => MemberCard(member: member)),
+        ...TeamDeviceHomePage.members.map(
+          (member) => MemberCard(member: member),
+        ),
       ],
     );
   }
@@ -164,12 +186,17 @@ class RealDeviceChecksSection extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Text('Android 真机运行检查项', style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold)),
+            const Text(
+              'Android 真机运行检查项',
+              style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+            ),
             const SizedBox(height: 8),
-            ...TeamDeviceHomePage.realDeviceChecks.map((item) => Padding(
-                  padding: const EdgeInsets.only(bottom: 6),
-                  child: Text('• $item'),
-                )),
+            ...TeamDeviceHomePage.realDeviceChecks.map(
+              (item) => Padding(
+                padding: const EdgeInsets.only(bottom: 6),
+                child: Text('• $item'),
+              ),
+            ),
           ],
         ),
       ),
@@ -189,12 +216,17 @@ class EvidenceRulesSection extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Text('最终证据要求', style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold)),
+            const Text(
+              '最终证据要求',
+              style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+            ),
             const SizedBox(height: 8),
-            ...TeamDeviceHomePage.evidenceRules.map((rule) => Padding(
-                  padding: const EdgeInsets.only(bottom: 6),
-                  child: Text('• $rule'),
-                )),
+            ...TeamDeviceHomePage.evidenceRules.map(
+              (rule) => Padding(
+                padding: const EdgeInsets.only(bottom: 6),
+                child: Text('• $rule'),
+              ),
+            ),
           ],
         ),
       ),
@@ -203,10 +235,15 @@ class EvidenceRulesSection extends StatelessWidget {
 }
 
 class TeamMember {
-  const TeamMember({required this.role, required this.name, required this.task});
+  const TeamMember({
+    required this.role,
+    required this.name,
+    required this.task,
+  });
 
   final String role;
   final String name;
   final String task;
 }
+
 // 赵家国确认真机检查项已补充 - 2026-06-18

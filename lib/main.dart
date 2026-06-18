@@ -58,6 +58,12 @@ class TeamDeviceHomePage extends StatelessWidget {
     '照片中要看到手持真实 Android 手机和本应用页面',
     'README 中要包含 GitHub 协作说明、PR 合并记录和真机照片',
     '提交前检查照片不包含私人聊天、手机号、定位等隐私信息',
+    '真机运行照片需清晰展示 Flutter App 在手机上的运行界面',
+    '照片中必须包含小组名称和组员分工信息',
+    'GitHub 仓库需保留完整的提交历史，不能 force push 覆盖',
+    'PR 合并记录必须真实，不能由同一人完成所有审查和合并',
+    '代码审查意见需在 PR 中有文字记录',
+    '最终提交前需在小组会议上进行演示确认',
   ];
 
   @override

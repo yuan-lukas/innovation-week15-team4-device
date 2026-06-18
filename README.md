@@ -1,54 +1,31 @@
-# 创新实验第15周：团队协作与 Android 真机运行示例
+# 创新实验第15周：团队协作与 Android 真机运行
 
-本项目用于第15周课堂任务：在第14周 Flutter Hello World 和 GitHub 提交练习的基础上，小组通过 Pull Request 协作修改同一个 Flutter 项目，并把最终版本运行到真实 Android 手机上。
+> 用 GitHub 协作，把第14周个人 Flutter Hello World 升级成小组真机运行成果
 
-## 最终要提交什么
+## 小组协作流程
 
-每组需要提交：
+小组成员需要完成：
 
-1. GitHub 原始仓库链接。
-2. 4 名组员的 Fork、分支、commit 或 Pull Request 证据。
-3. 组长合并 PR 后的最终 `main` 分支截图。
-4. 真实 Android 手机运行本应用的照片。
-5. README 中展示真机照片和小组分工。
+1. 组长创建 GitHub 原始仓库
+2. 4 名组员分别 Fork 仓库并创建个人分支
+3. 每名组员只修改分配的区域并提交 Pull Request
+4. 组长 Review 并合并 PR 到 `main` 分支
+5. 主电脑连接 Android 真机运行最终 App
+6. README 中展示分工、PR 合并记录和真机照片
 
-## 推荐协作方式
+## 小组成员与分工
 
-本周统一使用 Fork + Pull Request：
-
-```text
-组长创建原始仓库
-  ↓
-组员 Fork 到自己的 GitHub
-  ↓
-组员 clone 自己的 Fork
-  ↓
-组员创建个人分支并修改指定区域
-  ↓
-组员 push 到自己的 Fork
-  ↓
-组员向组长仓库提交 Pull Request
-  ↓
-组长 Review 并合并
-  ↓
-主电脑运行合并后的最终版本
-```
-
-组员不要直接 push 到组长仓库的 `main` 分支。
-
-## 小组分工建议
-
-| 角色 | 修改位置 | 任务 |
+| 角色 | 成员姓名 | 任务 |
 | --- | --- | --- |
-| 组长 | GitHub 仓库 | 创建仓库、维护 `main`、审核 PR、组织真机运行 |
-| 组员 A | `lib/main.dart` | 修改 `groupName`、`projectTitle`、`projectSlogan` |
-| 组员 B | `lib/main.dart` | 补全 `members` 中的小组成员姓名与分工 |
-| 组员 C | `lib/main.dart` | 补充 `realDeviceChecks` 中的真机检查项 |
-| 组员 D | `lib/main.dart` 和 `README.md` | 补充 `evidenceRules`，提交真机照片说明 |
+| 组长 | 刘凯 | 创建原始仓库、维护 main、审核 PR、组织真机运行与证据提交 |
+| 组员 A | 赵杰 | 修改 `groupName`、`projectTitle`、`projectSlogan` |
+| 组员 B | 陈建涛 | 补全 `members` 中的成员姓名与分工 |
+| 组员 C | 赵家国 | 补充 `realDeviceChecks` 中的真机运行检查项 |
+| 组员 D | 刘祖涛 | 补充 `evidenceRules`，并把真机照片加入 README |
 
-## 运行命令
+## 真机运行命令
 
-进入项目根目录后执行：
+在主电脑上运行应用：
 
 ```bash
 flutter pub get
@@ -56,13 +33,13 @@ flutter test
 flutter run
 ```
 
-如果电脑连接了多台设备，先查看设备：
+如果连接有多个设备，查看设备列表：
 
 ```bash
 flutter devices
 ```
 
-再指定真实 Android 手机运行：
+选择 Android 真机运行：
 
 ```bash
 flutter run -d 设备ID
@@ -70,49 +47,48 @@ flutter run -d 设备ID
 
 ## Android 真机检查
 
-连接手机后先检查：
+检查真机连接状态：
 
 ```bash
 adb devices
 flutter devices
 ```
 
-`adb devices` 的状态应为：
+`adb devices` 正常输出应为：
 
-```text
+```
 device
 ```
 
-如果显示 `unauthorized`，请解锁手机并允许 USB 调试。
+如果显示 `unauthorized`，请解锁手机并确认 USB 调试授权。
 
 ## 真机照片要求
 
-请把照片放到：
+照片文件应放在：
 
-```text
+```
 images/android-real-device.jpg
 ```
 
-并在本 README 中引用：
+并在 README 中引用：
 
 ```markdown
 ![Android 真机运行照片](images/android-real-device.jpg)
 ```
 
-合格照片必须满足：
+### 拍照规范
 
-- 真实 Android 手机正在运行本小组 Flutter 应用；
-- 不能是 Web 截图；
-- 不能是 Android 模拟器截图；
-- 不能用手机本机截图代替；
-- 必须由第二部手机拍摄；
-- 照片中能看到手持手机；
-- 不包含聊天记录、手机号、定位等隐私信息。
+- 照片必须由第二部手机拍摄，不能用本机截图代替
+- 照片中要看到手持真实 Android 手机和本应用页面
+- README 中要包含 GitHub 协作说明、PR 合并记录和真机照片
+- 提交前检查照片不包含私人聊天、手机号、定位等隐私信息
 
-## 本组真机运行照片
-
-提交照片后，下面应显示本组运行效果：
+## 最终真机运行照片
 
 ![Android 真机运行照片](images/android-real-device.jpg)
 
-如果图片暂时无法显示，请检查 `images/android-real-device.jpg` 是否已提交，以及文件名大小写是否一致。
+---
+
+<p align="center">
+  用 Flutter 与 GitHub 协作完成 — Innovation Team 4
+</p>

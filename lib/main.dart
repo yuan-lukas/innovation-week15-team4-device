@@ -52,6 +52,11 @@ class TeamDeviceHomePage extends StatelessWidget {
     'App 页面中能正确显示小组名称、成员分工、检查项和证据要求',
   ];
 
+  static const List<String> realDeviceChecks = [
+    '主电脑能执行 flutter doctor，并识别 Android toolchain',
+    '已开启手机的开发者选项和 USB 调试',
+    '手机通过数据线连接电脑，并授权 USB 调试',
+    '终端运行 flutter devices 能看到真实手机型号',
 
   static const List<String> evidenceRules = [
     '证据照片必须由第二部手机拍摄，不能用本机截图代替',

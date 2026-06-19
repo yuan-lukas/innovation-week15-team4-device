@@ -18,8 +18,8 @@ android {
         applicationId = "com.example.group_flutter_android_demo"
         minSdk = flutter.minSdkVersion
         targetSdk = flutter.targetSdkVersion
-        versionCode = flutter.versionCode
-        versionName = flutter.versionName
+        versionCode = flutter.versionCode()
+        versionName = flutter.versionName()
     }
 
     buildTypes {
@@ -29,11 +29,7 @@ android {
     }
 }
 
-kotlin {
-    compilerOptions {
-        jvmTarget = org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_17
-    }
-}
+// Kotlin options configured in compileOptions above
 
 flutter {
     source = "../.."

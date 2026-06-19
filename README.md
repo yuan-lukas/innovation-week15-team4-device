@@ -85,7 +85,15 @@ images/android-real-device.jpg
 
 ## 最终真机运行照片
 
-![Android 真机运行照片](images/android-real-device.jpg)
+> 手机型号：华为 REA AN00 | 拍摄时间：2026-06-19 | 运行命令：`flutter run`
+
+### 照片一：App 首页（小组成员与 PR 分工）
+
+![Android 真机运行照片1](images/android-real-device.jpg)
+
+### 照片二：App 检查项页面（Android 真机运行检查项）
+
+![Android 真机运行照片2](images/android-real-device-2.jpg)
 
 ---
 
